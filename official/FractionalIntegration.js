@@ -102,10 +102,9 @@ var init = () => {
   {
     let getDesc = (level) => "\\dot{t}=" + getT(level).toString(1);
     let getInfo = (level) => "\\dot{t}=" + getT(level).toString(1);
-    t = theory.createUpgrade(0, currency, new ExponentialCost(1e25, Math.log2(1e50)));
+    t = theory.createUpgrade(0, currency, new ExponentialCost(1e25, Math.log2(100)));
     t.getDescription = (amount) => Utils.getMath(getDesc(t.level));
     t.getInfo = (amount) => Utils.getMathTo(getInfo(t.level), getInfo(t.level + amount));
-    t.maxLevel = 4;
   }
 
   // q1
@@ -300,7 +299,7 @@ var init = () => {
       return "$\\text{Improve } \\lambda \\text{ Fraction to } 3/4^{i}$";
     };
     baseUpg.boughtOrRefunded = (_) => {
-      lambda_base = BigNumber.from(2 + baseUpg.level);
+      lambda_base = BigNumber.from(2 + 2 * baseUpg.level);
       k.level = 1;
       update_divisor = true;
       theory.invalidateSecondaryEquation();
