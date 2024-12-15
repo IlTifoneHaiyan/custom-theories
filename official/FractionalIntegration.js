@@ -154,7 +154,7 @@ var init = () => {
 
   //M
   {
-    let getDesc = (level) => "m= 1.5^{" + level + "}";
+    let getDesc = (level) => "m= 4^{" + level + "}";
     let getInfo = (level) => "m=" + getM(level).toString(0);
     m = theory.createUpgrade(4, currency, new ExponentialCost(1e4, Math.log2(4.44)));
     m.getDescription = (amount) => Utils.getMath(getDesc(m.level));
