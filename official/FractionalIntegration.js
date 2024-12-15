@@ -484,21 +484,21 @@ var getMilCustomCost = (level) => {
     case 3:
       return 7;
     case 4:
-      return 21;
+      return 10;
     case 5:
-      return 30;
+      return 15;
     case 6:
-      return 42.5;
+      return 30;
     case 7:
-      return 53;
+      return 40;
     case 8:
-      return 70;
+      return 45;
     case 9:
-      return 80;
+      return 50;
     case 10:
-      return 95;
+      return 55;
   }
-  return 115;
+  return 60;
 };
 
 var postPublish = () => {
