@@ -631,7 +631,7 @@ var getT = (level) => BigNumber.from(0.2 + level * 0.2);
 var getQ1 = (level) => Utils.getStepwisePowerSum(level, 50, 23, 0);
 var getQ2 = (level) => BigNumber.TWO.pow(level);
 var getK = (level) => BigNumber.from(level);
-var getM = (level) => BigNumber.from(1.5).pow(level);
+var getM = (level) => BigNumber.from(4).pow(level);
 var getN = (level) => Utils.getStepwisePowerSum(level, 3, 11, 0);
 var getH = (level) => [0.03870, 0.04357, -0.19151, -0.02968][level]
 
